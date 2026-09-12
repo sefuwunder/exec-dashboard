@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meridian · Executive Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%237dd3fc'/><text x='50' y='68' font-size='52' text-anchor='middle' font-family='sans-serif' font-weight='bold' fill='%23070b16'>M</text></svg>">
+</head>
+<body>
+<div class="aurora" aria-hidden="true">
+  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+</div>
+
+<div class="wrap">
+  <header class="top">
+    <div class="brand">
+      <div class="mark">M</div>
+      <div>
+        <h1>Meridian</h1>
+        <p>Executive command · Q3 2026</p>
+      </div>
+    </div>
+    <div class="clock">
+      <div class="t" id="clock-time">--:--</div>
+      <div class="d" id="clock-date"></div>
+    </div>
+  </header>
+
+  <section class="kpis" id="kpis" aria-label="Key metrics"></section>
+
+  <div class="grid-2">
+    <section class="glass card">
+      <h2>Revenue vs target</h2>
+      <div class="sub">Monthly recognized revenue, trailing 12 months · $M</div>
+      <div class="legend">
+        <span><i style="background:#7dd3fc"></i>Actual</span>
+        <span><i style="background:#5b6478"></i>Target</span>
+      </div>
+      <div id="revenue-chart"></div>
+    </section>
+    <section class="glass card">
+      <h2>Sales pipeline</h2>
+      <div class="sub">Open pipeline by stage · conversion vs previous stage</div>
+      <div id="funnel"></div>
+    </section>
+  </div>
+
+  <div class="grid-2b">
+    <section class="glass card">
+      <h2>Needs attention</h2>
+      <div class="sub">Risks and blockers, ranked by severity</div>
+      <div id="alerts"></div>
+    </section>
+    <section class="glass card">
+      <h2 id="sprint-name">Engineering</h2>
+      <div class="sub">Sprint burndown · remaining story points</div>
+      <div id="burndown"></div>
+      <div class="dora" id="dora"></div>
+    </section>
+  </div>
+
+  <section class="glass card" style="animation-delay:.34s">
+    <h2>Quarterly OKRs</h2>
+    <div class="sub">Company objectives and key-result progress</div>
+    <div id="okrs"></div>
+  </section>
+
+  <footer>Meridian · confidential — for the executive team</footer>
+</div>
+
+<script src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+{"name":"exec-dashboard","scripts":{"start":"bun server.ts"},"version":"1.0.0"}
