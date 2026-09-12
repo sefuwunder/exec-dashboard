@@ -60,7 +60,7 @@ function areaChart(rows) {
     " L" + X(rows.length - 1).toFixed(1) + "," + (H - P.b) + " L" + X(0).toFixed(1) + "," + (H - P.b) + ' Z"' +
     ' fill="url(#revfill)"/>';
   const labels = rows.map((r, i) =>
-    '<text x="' + X(i).toFixed(1) + '" y="' + (H - 8) + '" text-anchor="middle" font-size="11" fill="#9aa3b8">' + r.month + "</text>"
+    '<text x="' + X(i).toFixed(1) + '" y="' + (H - 8) + '" text-anchor="middle" font-size="11" fill="#c2c9d8">' + r.month + "</text>"
   ).join("");
   const grid = [0.25, 0.5, 0.75].map((f) => {
     const y = P.t + f * (H - P.t - P.b);
@@ -80,7 +80,7 @@ function burndownChart(s, days) {
   const Y = (v) => P.t + (1 - v / max) * (H - P.t - P.b);
   const path = (arr) => arr.map((v, i) => (i ? "L" : "M") + X(i).toFixed(1) + "," + Y(v).toFixed(1)).join(" ");
   const labels = days.map((d, i) =>
-    '<text x="' + X(i).toFixed(1) + '" y="' + (H - 6) + '" text-anchor="middle" font-size="11" fill="#9aa3b8">' + d + "</text>"
+    '<text x="' + X(i).toFixed(1) + '" y="' + (H - 6) + '" text-anchor="middle" font-size="11" fill="#c2c9d8">' + d + "</text>"
   ).join("");
   return '<svg class="chart" viewBox="0 0 ' + W + " " + H + '" role="img">' +
     '<path d="' + path(s.ideal) + '" fill="none" stroke="#5b6478" stroke-width="2" stroke-dasharray="6 5"/>' +

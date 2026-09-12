@@ -1,9 +1,9 @@
 /* Meridian executive dashboard — dark glass */
 
 :root {
-  --bg: #070b16;
+  --bg: #595c63;
   --ink: #eef1f8;
-  --muted: #9aa3b8;
+  --muted: #c2c9d8;
   --glass: rgba(255, 255, 255, 0.055);
   --glass-2: rgba(255, 255, 255, 0.09);
   --stroke: rgba(255, 255, 255, 0.13);
@@ -33,9 +33,9 @@ body {
 .aurora {
   position: fixed; inset: 0; z-index: -1; overflow: hidden;
   background:
-    radial-gradient(1200px 800px at 15% -10%, #1b2a5e 0%, transparent 60%),
-    radial-gradient(1000px 700px at 90% 10%, #3b1d5e 0%, transparent 55%),
-    radial-gradient(900px 900px at 50% 110%, #0b3b4a 0%, transparent 60%),
+    radial-gradient(1200px 800px at 15% -10%, #667093 0%, transparent 60%),
+    radial-gradient(1000px 700px at 90% 10%, #7c6893 0%, transparent 55%),
+    radial-gradient(900px 900px at 50% 110%, #5c7c86 0%, transparent 60%),
     var(--bg);
 }
 .blob {
@@ -43,9 +43,9 @@ body {
   filter: blur(90px); opacity: 0.5;
   animation: drift 26s ease-in-out infinite alternate;
 }
-.blob.b1 { width: 520px; height: 520px; left: -120px; top: -140px; background: #2563eb; }
-.blob.b2 { width: 460px; height: 460px; right: -100px; top: 6%; background: #a855f7; animation-delay: -8s; }
-.blob.b3 { width: 620px; height: 620px; left: 30%; bottom: -260px; background: #0ea5e9; animation-delay: -16s; opacity: 0.35; }
+.blob.b1 { width: 520px; height: 520px; left: -120px; top: -140px; background: #6d96f2; }
+.blob.b2 { width: 460px; height: 460px; right: -100px; top: 6%; background: #c58dfa; animation-delay: -8s; }
+.blob.b3 { width: 620px; height: 620px; left: 30%; bottom: -260px; background: #5ec3f0; animation-delay: -16s; opacity: 0.35; }
 @keyframes drift {
   from { transform: translate(0, 0) scale(1); }
   to   { transform: translate(60px, 40px) scale(1.12); }
